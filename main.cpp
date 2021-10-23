@@ -4,6 +4,7 @@
 #include <iostream>
 #include <vector>
 #include <string>
+#include "functions.hpp"
 using std::cout;
 using std::endl;
 using std::vector;
@@ -21,32 +22,32 @@ int main()
 	string_v.push_back("sixth");
 	string_v.push_back("seventh");
 
-	cout << "Vector of strings: \n";
+	cout << "\nVector of strings: \n";
 	// 1. write a function "print" that prints the vector of strings
-	// print(string_v);
+	pse::print(string_v);
 
 	// 2. write a function string_lengths returns a vector
 	//    with length of each string in argument
-	// vector<int> lengths = string_lengths(string_v);
+	vector<int> lengths = pse::string_lengths(string_v);
 
 	cout << "Vector of lengths:\n";
-	// print(lengths);
+	pse::print(lengths);
 
 	// 3. write a function "longest_string" that
 	//    returns longest string in a vector of strings
-	// cout << "Longest string: " << longest_string(string_v) << endl;
+	cout << "Longest string: " << pse::longest_string(string_v) << endl;
 
 	// 4. write a function "shortest_string" that
 	// returns the shortest string in a vector of strings
-	// cout << "Shortest string: " << shortest_string(string_v) << endl;
+	cout << "Shortest string: " << pse::shortest_string(string_v) << endl;
 
 	// 5. write a function "alpha_first_string" that
 	// returns lexicographically first string in a vector of strings
-	// cout << "Lexicographically first string: " << alpha_first_string(string_v) << endl;
+	cout << "Lexicographically first string: " << pse::alpha_first_string(string_v) << endl;
 
 	// 6. write a function "alpha_last_string" that
 	// returns lexicographically last string in a vector of strings
-	// cout << "Lexicographically last string: " << alpha_last_string(string_v) << endl;
+	cout << "Lexicographically last string: " << pse::alpha_last_string(string_v) << endl;
 
 	return 0;
 }

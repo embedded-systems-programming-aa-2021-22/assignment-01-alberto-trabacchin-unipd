@@ -30,4 +30,11 @@ namespace pse {
         return v.at(max_i);
     }
 
+    std::string shortest_string(std::vector<std::string> v) {
+        std::vector<int> str_len = string_lengths(v);
+        std::vector<int>::const_iterator min_pos = std::min_element(str_len.cbegin(), str_len.cend());
+        size_t min_i = std::distance(str_len.cbegin(), min_pos);
+        return v.at(min_i);
+    }
+
 }

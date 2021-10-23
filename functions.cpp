@@ -1,4 +1,7 @@
 #include <iostream>
+#include <algorithm>
+#include <iterator>
+
 #include "functions.hpp"
 
 namespace pse {
@@ -9,7 +12,7 @@ namespace pse {
     }
 
     void print(std::vector<int> v) {
-        for(size_t i = 0; i < v.size(); i++)
+        for (size_t i = 0; i < v.size(); i++)
             std::cout << v.at(i) << std::endl;
     }
 
@@ -18,6 +21,13 @@ namespace pse {
         for (size_t i = 0; i < v.size(); i++)
             v_len[i] = static_cast<int> (v.at(i).length());
         return v_len;
+    }
+
+    std::string longest_string(std::vector<std::string> v) {
+        std::vector<int> str_len = string_lengths(v);
+        std::vector<int>::const_iterator max_pos = std::max_element(str_len.cbegin(), str_len.cend());
+        size_t max_i = std::distance(str_len.cbegin(), max_pos);
+        return v.at(max_i);
     }
 
 }

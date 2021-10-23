@@ -37,4 +37,14 @@ namespace pse {
         return v.at(min_i);
     }
 
+    std::string alpha_first_string(std::vector<std::string> v) {
+        std::sort(v.begin(), v.end());
+        return v.front();
+    }
+
+    std::string alpha_last_string(std::vector<std::string> v) {
+        std::sort(v.begin(), v.end());
+        return v.back();
+    }
+
 }

@@ -1,6 +1,7 @@
 #include <iostream>
 #include <algorithm>
 #include <iterator>
+#include <string>
 
 #include "functions.hpp"
 

@@ -7,13 +7,17 @@
 namespace pse {
     
     void print(std::vector<std::string> v) {
+        std::cout << "{ ";
         for (size_t i = 0; i < v.size(); i++)
-            std::cout << v.at(i) << std::endl;
+            std::cout << v.at(i) << " ";
+        std::cout << "}" << std::endl;
     }
 
     void print(std::vector<int> v) {
+        std::cout << "{ ";
         for (size_t i = 0; i < v.size(); i++)
-            std::cout << v.at(i) << std::endl;
+            std::cout << v.at(i) << " ";
+        std::cout << "}" << std::endl;
     }
 
     std::vector<int> string_lengths(std::vector<std::string> v) {
